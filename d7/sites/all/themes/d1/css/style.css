@@ -2,4 +2,40 @@
 
 html { height:100% }
 
-body { height:100%; margin:0px; padding:0px; }
+body { 
+	height:100%; 
+	margin:0px; 
+	padding:0px; 
+	font:normal 100% Helvetica,Arial,sans-serif; 
+}
+
+.clearfix {
+	clear:both;
+}
+
+#header {
+	width: 100%;
+}
+
+#footer {
+	width: 100%
+}
+
+#center {
+	width: 100%;
+}
+
+#sidebarleft {
+	float:left;
+	width:20%;
+}
+
+#sidebarright: {
+	float:left;
+	width:20%;
+}
+
+#content {
+	float:left;
+	width:59%;
+}
