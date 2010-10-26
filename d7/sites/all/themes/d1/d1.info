@@ -1,0 +1,6 @@
+name = d1
+description = deltan custom theme
+package = deltan
+version = 1.x
+core = 7.x
+engine = phptemplate
