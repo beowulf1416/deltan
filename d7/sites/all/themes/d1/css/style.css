@@ -9,10 +9,6 @@ body {
 	font:normal 100% Helvetica,Arial,sans-serif; 
 }
 
-.clearfix {
-	clear:both;
-}
-
 #header {
 	width: 100%;
 }
@@ -30,12 +26,20 @@ body {
 	width:20%;
 }
 
-#sidebarright: {
+#sidebarright {
 	float:left;
 	width:20%;
+}
+
+.front #sidebarright {
+	width:60%;
 }
 
 #content {
 	float:left;
 	width:59%;
+}
+
+.front #content {
+	width:39%;
 }

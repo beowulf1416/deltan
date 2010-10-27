@@ -1,5 +1,4 @@
 <?php
-//print(render($page["header"]));
 ?>
 
   <div id="wrapper">
@@ -11,7 +10,8 @@
     	</div> <!-- /#header -->
 
 		<div id="center">
-		 	
+
+			<?php if(!$is_front){ ?>		 	
 		 	<div id="sidebarleft">
 		 		<h1>Left</h1>
 		 		<?php 
@@ -20,6 +20,7 @@
 		 		}
 		 		?>
 		 	</div> <!-- /#sidebarleft -->
+		 	<?php } // $is_front ?>
 		 	
 	    	<div id="content">
 	    		<div id="content-messages">
