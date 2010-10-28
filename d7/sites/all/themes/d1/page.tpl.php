@@ -5,8 +5,14 @@
     <div id="container" class="clearfix">
     
     	<div id="header">
-    		<h1>Header</h1>
-			<?php print(render($page["header"])); ?>
+    		<?php 
+    		if($is_front){ 
+    			print("<div id=\"menu-front\">");
+    			print(theme("links",array("links"=>menu_navigation_links("menu-menu-front")))); 
+    			print("</div><!-- /#menu-front -->");
+    		} 
+    		?>
+			<?php //print(render($page["header"])); ?>
     	</div> <!-- /#header -->
 
 		<div id="center">

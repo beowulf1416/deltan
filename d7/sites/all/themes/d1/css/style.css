@@ -37,7 +37,7 @@ body {
 }
 
 .front #sidebarright {
-	width:60%;
+	width:40%;
 }
 
 #content {
@@ -46,5 +46,9 @@ body {
 }
 
 .front #content {
-	width:39%;
+	width:59%;
+}
+
+#menu-front {
+	text-align:right;
 }
