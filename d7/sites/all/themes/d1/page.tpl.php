@@ -39,7 +39,10 @@
 	    </div> <!-- /#center -->
     	
     	<div id="footer">
-    		<h1>Footer</h1>
+    		<?php 
+    		print(render($page["footer"])); 
+    		include("$directory/includes/footer.php");
+    		?>
     	</div>	<!-- /#footer -->
 
     </div> <!-- /#container -->

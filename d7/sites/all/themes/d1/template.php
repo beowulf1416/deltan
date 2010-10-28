@@ -1,7 +1,7 @@
 <?php
 
 function d1_preprocess(&$variables, $hook){
-	
+	$variables["site_mail"] = variable_get("site_mail","");
 }
 
 function d1_preprocess_html(&$vars) {
