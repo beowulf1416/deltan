@@ -1,6 +1,6 @@
 <?php
 function sdt_profile_install(){
-	drupal_install_schema("sdt_profile");
+	
 }
 
 function sdt_profile_schema(){
