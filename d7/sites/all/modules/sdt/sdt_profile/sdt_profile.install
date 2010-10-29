@@ -1,0 +1,53 @@
+<?php
+function sdt_profile_install(){
+	drupal_install_schema("sdt_profile");
+}
+
+function sdt_profile_schema(){
+	
+	$schema["sdt_profiles"] = array(
+		"description"=>"table of deltan members",
+		"fields"=>array(
+			"uid"=>array(
+				"description"=>"user id",
+				"type"=>"int",
+				"unsigned"=>TRUE,
+				"not null"=>TRUE
+			),
+			"batch"=>array(
+				"description"=>"year inducted into roster of members",
+				"type"=>"int",
+				"unsigned"=>TRUE,
+				"not null"=>TRUE
+			),
+			"school"=>array(
+				"description"=>"university acronym",
+				"type"=>"varchar",
+				"length"=>10,
+				"not null"=>TRUE
+			),
+			"first_name"=>array(
+				"description"=>"first name",
+				"type"=>"varchar",
+				"length"=>100,
+				"not null"=>TRUE
+			),
+			"last_name"=>array(
+				"description"=>"last name",
+				"type"=>"varchar",
+				"length"=>100,
+				"not null"=>TRUE
+			)
+		),
+		"primary key"=>array("uid"),
+		"foreign keys"=>array(
+			"users"=>array(
+				"table"=>"users",
+				"columns"=>array("uid"=>"uid")
+			)
+		)
+	);
+	
+	return $schema;
+	
+}

@@ -1,0 +1,6 @@
+name = SDT Profile
+description = Sigma Delta Tau Profile
+core = 7.x
+package = SDT
+
+files[] = sdt_profile.module

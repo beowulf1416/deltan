@@ -1,0 +1,51 @@
+<?php
+function sdt_profile_form_user_register_form_alter(&$form,&$form_state){
+	
+	$form["profile"] = array(
+		"#type"=>"fieldset"
+	);
+	
+	$form["profile"]["name-first"] = array(
+		"#type"=>"textfield",
+		"#title"=>t("First name"),
+		"#required"=>TRUE
+	);
+	
+	$form["profile"]["name-last"] = array(
+		"#type"=>"textfield",
+		"#title"=>t("Last name"),
+		"#required"=>TRUE
+	);
+	
+	$options = array();
+	$date = getdate();
+	for($i=1964;$i<$date["year"]+1;$i++){
+		$options["$i"] = $i;
+	}
+	$form["profile"]["batch-year"] = array(
+		"#type"=>"select",
+		"#title"=>t("Batch"),
+		"#required"=>TRUE,
+		"#options"=>$options
+	);
+	
+	$form["profile"]["school"] = array(
+		"#type"=>"select",
+		"#title"=>t("University"),
+		"#required"=>TRUE,
+		"#options"=>array("UM"=>t("University of Mindanao"),"USEP"=>t("University of Southeastern Philippines"))
+	);
+	
+}
+
+function sdt_profile_user_insert(&$edit, $account, $category){
+	
+}
+
+function sdt_profile_user_view($account, $view_mode, $langcode){
+	
+}
+
+function sdt_profile_user_categories(){
+	
+}
