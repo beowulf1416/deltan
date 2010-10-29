@@ -43,6 +43,26 @@ function sdt_profile_schema(){
 				"type"=>"varchar",
 				"length"=>100,
 				"not null"=>TRUE
+			),
+			"address"=>array(
+				"description"=>"address",
+				"type"=>"varchar",
+				"length"=>300
+			),
+			"city"=>array(
+				"description"=>"city",
+				"type"=>"varchar",
+				"length"=>100
+			),
+			"country"=>array(
+				"description"=>"country",
+				"type"=>"int",
+				"unsigned"=>TRUE
+			),
+			"contact_number"=>array(
+				"description"=>"contact number",
+				"type"=>"varchar",
+				"length"=>100
 			)
 		),
 		"primary key"=>array("uid"),
