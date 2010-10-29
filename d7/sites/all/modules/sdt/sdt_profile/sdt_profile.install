@@ -14,10 +14,16 @@ function sdt_profile_schema(){
 				"unsigned"=>TRUE,
 				"not null"=>TRUE
 			),
-			"batch"=>array(
+			"batch_year"=>array(
 				"description"=>"year inducted into roster of members",
 				"type"=>"int",
 				"unsigned"=>TRUE,
+				"not null"=>TRUE
+			),
+			"batch_spec"=>array(
+				"description"=>"batch specifier",
+				"type"=>"varchar",
+				"length"=>10,
 				"not null"=>TRUE
 			),
 			"school"=>array(

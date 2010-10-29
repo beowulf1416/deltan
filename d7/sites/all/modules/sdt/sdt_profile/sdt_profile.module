@@ -29,6 +29,14 @@ function sdt_profile_form_user_register_form_alter(&$form,&$form_state){
 		"#options"=>$options
 	);
 	
+	$options = drupal_map_assoc(array("A","B"));
+	$form["profile"]["batch-specifier"] = array(
+		"#type"=>"select",
+		"#title"=>t("Specifier"),
+		"#required"=>TRUE,
+		"#options"=>$options
+	);
+	
 	$form["profile"]["school"] = array(
 		"#type"=>"select",
 		"#title"=>t("University"),
@@ -39,7 +47,18 @@ function sdt_profile_form_user_register_form_alter(&$form,&$form_state){
 }
 
 function sdt_profile_user_insert(&$edit, $account, $category){
+	$first_name = $edit["name-first"];
+	$last_name = $edit["name-last"];
+	$year = $edit["batch-year"];
+	$school = $edit["school"];
 	
+	include("sdt_profile.db.inc");
+	
+	
+	unset($edit["name-first"]);
+	unset($edit["name-last"]);
+	unset($edit["batch-year"]);
+	unset($edit["school"]);
 }
 
 function sdt_profile_user_view($account, $view_mode, $langcode){
